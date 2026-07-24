@@ -26,7 +26,6 @@ const KokoroyaSection = () => {
           </span>
         ))}
       </h1>
-      {/* video main di dalam bentuk logo (logo dipakai sebagai mask) */}
       <video
         src="/kokoroya/kokomv.mp4"
         autoPlay
