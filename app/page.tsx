@@ -2,6 +2,8 @@
 
 import AfterHeroes from "@/app/afterHeroes";
 import HeroesSection from "@/app/heroes";
+import KokoroyaSection from "@/app/kokoroya";
+import SignatureDishSection from "@/app/signatureDish";
 import WhyUsSection from "@/app/whyUsSection";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -39,9 +41,12 @@ const Home = () => {
         scrollTrigger: {
           trigger: container.current,
           start: "top top",
-          end: "+=250%",
+          end: "+=350%",
           scrub: true,
           pin: true,
+          // refresh pin ini DULUAN (spacer kepasang) sebelum trigger di
+          // section bawahnya ngitung posisi — biar mereka ga stale.
+          refreshPriority: 1,
         },
       });
       tl.from(".after-heroes", { xPercent: -100, ease: "none" })
@@ -79,6 +84,8 @@ const Home = () => {
         <AfterHeroes />
       </div>
       <WhyUsSection />
+      <SignatureDishSection />
+      <KokoroyaSection />
     </>
   );
 };

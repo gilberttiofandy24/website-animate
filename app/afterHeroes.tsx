@@ -5,7 +5,7 @@ import Image from "next/image";
 const AfterHeroes = () => {
   return (
     <section className="after-heroes absolute inset-0">
-      <div className="min-h-screen w-full bg-white">
+      <div className="min-h-screen w-full bg-white pb-50">
         <nav className="ah-nav flex items-center justify-between px-8 py-6">
           <Image
             src="/kokoroya/kokorologo.png"
